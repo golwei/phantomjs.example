@@ -1,9 +1,0 @@
-var page = require('webpage').create();
-page.open('http://www.baidu.com', function() {
-  page.includeJs("http://cdn.bootcss.com/jquery/1.6.4/jquery.min.js", function() {
-    page.evaluate(function() {
-      $("button").click();
-    });
-    phantom.exit()
-  });
-});
