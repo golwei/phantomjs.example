@@ -1,12 +1,3 @@
-var page = require('webpage').create();
-page.open('http://www.baidu.com', function() {
-  page.includeJs("", function() {
-    page.evaluate(function() {
-      $("button").click();
-    });
-    phantom.exit()
-  });
-});
 
 
 // Read the Phantom webpage '#intro' element text using jQuery and "includeJs"
@@ -18,7 +9,7 @@ page.onConsoleMessage = function(msg) {
     console.log(msg);
 };
 
-page.open("http://phantomjs.org/", function(status) {
+page.open("http://www.baidu.com/", function(status) {
     if (status === "success") {
         page.includeJs("http://cdn.bootcss.com/jquery/1.6.4/jquery.min.js", function() {
             page.evaluate(function() {
